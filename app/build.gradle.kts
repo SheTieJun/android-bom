@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.shetj.android.bom"
-    compileSdk = 33
+    compileSdk = 32
 
     defaultConfig {
         applicationId = "com.shetj.android.bom"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 32
         versionCode = 1
         versionName = "1.0"
 

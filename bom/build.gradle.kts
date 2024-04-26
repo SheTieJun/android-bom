@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.androidx.bom"
-    compileSdk = 33
+    compileSdk = 32
 
     defaultConfig {
         minSdk = 21
@@ -69,10 +69,9 @@ val depList = mutableListOf<MavenDep>().apply {
     val navigationVersion = libs.versions.androidx.navigation.get()
     add(MavenDep("androidx.navigation", "navigation-fragment-ktx", navigationVersion))
     add(MavenDep("androidx.navigation", "navigation-ui-ktx", navigationVersion))
-    add(MavenDep("androidx.paging", "paging-runtime-ktx", "3.2.1"))
+    add(MavenDep("androidx.paging", "paging-runtime-ktx", libs.versions.androidx.paging.get()))
     add(MavenDep("androidx.tracing", "tracing-ktx", libs.versions.tracingKtx.get()))
     add(MavenDep("androidx.datastore", "datastore-preferences", libs.versions.androidx.datastore.get()))
-    add(MavenDep("androidx.metrics", "metrics-performance", libs.versions.metricsPerformance.get()))
 }
 
 dependencies {
@@ -87,7 +86,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.SheTieJun"
             artifactId = "androidx-bom"
-            version = "33.1.0.0"
+            version = "32.1.0.0"
             pom.withXml {
                 asNode().appendNode("dependencyManagement")
                     .appendNode("dependencies")
