@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.androidx.bom"
-    compileSdk = 32
+    compileSdk = 31
 
     defaultConfig {
         minSdk = 21
@@ -86,7 +86,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.SheTieJun"
             artifactId = "androidx-bom"
-            version = "32.1.0.0"
+            version = "31.1.0.0"
             pom.withXml {
                 asNode().appendNode("dependencyManagement")
                     .appendNode("dependencies")

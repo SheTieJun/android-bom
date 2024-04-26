@@ -12,7 +12,11 @@ Dependency 'androidx.xxxxx' requires libraries and applications that
 
 ## [Android Jetpack Bom 30](doc/Android-Jetpack-Bom-30.MD)
 
+## [Android Jetpack Bom 31](doc/Android-Jetpack-Bom-31.MD)
+
 ## [Android Jetpack Bom 32](doc/Android-Jetpack-Bom-32.MD)
+
+- Kotlin 1.8.22
 
 ## [Android Jetpack Bom 33](doc/Android-Jetpack-Bom-33.MD)
 

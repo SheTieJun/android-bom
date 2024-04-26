@@ -1,5 +1,5 @@
 # Android Jetpack Bom 30
-
+```toml
 kotlin = "1.8.22"
 #1.9~1.8 必须是34版本
 androidx-activity = "1.7.2"
@@ -43,6 +43,7 @@ metricsPerformance = "1.0.0-alpha04"
 runner = "1.5.2"
 tracingKtx = "1.1.0"
 androidx-paging="3.2.1"
+```
 
 ```kotlin
 
