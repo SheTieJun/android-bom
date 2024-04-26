@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.androidx.bom"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 21
@@ -39,6 +39,7 @@ val depList = mutableListOf<MavenDep>().apply {
     add(MavenDep("androidx.constraintlayout", "constraintlayout", libs.versions.androidx.constraintlayout.get()))
     add(MavenDep("androidx.recyclerview", "recyclerview", libs.versions.recyclerview.get()))
     add(MavenDep("androidx.core", "core-splashscreen", libs.versions.androidx.splashscreen.get()))
+    add(MavenDep("androidx.activity", "activity", libs.versions.androidx.activity.get()))
     add(MavenDep("androidx.activity", "activity-ktx", libs.versions.androidx.activity.get()))
     add(MavenDep("androidx.palette", "palette", libs.versions.androidx.palette.get()))
     add(MavenDep("androidx.cardview", "cardview", libs.versions.androidx.cardview.get()))
@@ -48,7 +49,6 @@ val depList = mutableListOf<MavenDep>().apply {
     add(MavenDep("androidx.webkit", "webkit", libs.versions.androidx.webKit.get()))
     add(MavenDep("androidx.window", "window", libs.versions.androidx.window.get()))
     add(MavenDep("androidx.browser", "browser", libs.versions.androidx.browser.get()))
-    add(MavenDep("androidx.core", "core-animation", libs.versions.androidx.animationCore.get()))
     add(MavenDep("androidx.concurrent", "concurrent-futures-ktx", libs.versions.androidx.concurrent.get()))
     add(MavenDep("androidx.test.espresso", "espresso-core",libs.versions.espressoCore.get()))
     add(MavenDep("androidx.preference", "preference-ktx", libs.versions.preferenceVersion.get()))
@@ -83,18 +83,12 @@ dependencies {
 
 publishing {
     // Define your local maven path
-    repositories {
-        maven {
-            mavenLocal()
-        }
-    }
     publications {
         create<MavenPublication>("release") {
             groupId = "com.github.SheTieJun"
             artifactId = "androidx-bom"
-            version = "34.1.0.0"
+            version = "33.1.0.0"
             pom.withXml {
-
                 asNode().appendNode("dependencyManagement")
                     .appendNode("dependencies")
                     .also { dependencies ->
