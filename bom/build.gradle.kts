@@ -76,9 +76,9 @@ val depList = mutableListOf<MavenDep>().apply {
 }
 
 dependencies {
-    depList.forEach {
-        api("${it.group}:${it.name}:${it.version}")
-    }
+//    depList.forEach {
+//        api("${it.group}:${it.name}:${it.version}")
+//    }
 }
 
 publishing {

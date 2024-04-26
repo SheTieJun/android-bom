@@ -1,6 +1,6 @@
-# Android Jetpack Bom 33
+# Android Jetpack Bom 32
 
-compileSdk = 33
+compileSdk = 32
 
 ```toml
 kotlin = "1.8.22"
@@ -42,22 +42,19 @@ recyclerview = "1.3.2"
 androidGradlePlugin = "8.2.2"
 biometricKtx = "1.2.0-alpha05"
 androidx-splashscreen = "1.0.1"
-metricsPerformance = "1.0.0-alpha04"
 runner = "1.5.2"
 tracingKtx = "1.1.0"
 androidx-paging="3.2.1"
 ```
 
 ```kotlin
-
-    implementation(platform("com.github.SheTieJun:androidx-bom:33.1.0.0"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:32.1.0.0"))
     implementation("androidx.core:core-ktx")
     implementation("androidx.appcompat:appcompat")
     implementation("com.google.android.material:material")
     implementation("androidx.constraintlayout:constraintlayout")
     implementation("androidx.recyclerview:recyclerview")
     implementation("androidx.work:work-runtime-ktx")
-    implementation("androidx.metrics:metrics-performance")
     implementation("androidx.core:core-splashscreen")
     implementation("androidx.activity:activity")
     implementation("androidx.activity:activity-ktx")
@@ -87,4 +84,6 @@ androidx-paging="3.2.1"
     implementation("androidx.tracing:tracing-ktx")
     implementation("androidx.datastore:datastore-preferences")
 ```
+
+
  

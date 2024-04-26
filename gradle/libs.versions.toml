@@ -1,6 +1,6 @@
 [versions]
 agp="8.2.2"
-kotlin = "1.8.22"
+kotlin = "1.9.20"
 #1.9~1.8 必须是34版本
 androidx-activity = "1.7.2"
 #1.13.0 必须是34版本
