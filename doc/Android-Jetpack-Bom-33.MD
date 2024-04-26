@@ -1,4 +1,7 @@
-# Android Jetpack Bom 30
+# Android Jetpack Bom 33
+
+compileSdk = 33
+
 ```toml
 kotlin = "1.8.22"
 #1.9~1.8 必须是34版本
