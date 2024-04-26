@@ -1,5 +1,8 @@
-# Android Jetpack Bom 30
+# Android Jetpack Bom 32
 
+compileSdk = 32
+
+```toml
 kotlin = "1.8.22"
 #1.9~1.8 必须是34版本
 androidx-activity = "1.7.2"
@@ -42,7 +45,7 @@ androidx-splashscreen = "1.0.1"
 runner = "1.5.2"
 tracingKtx = "1.1.0"
 androidx-paging="3.2.1"
-
+```
 
 ```kotlin
     implementation(platform("com.github.SheTieJun:androidx-bom:32.1.0.0"))

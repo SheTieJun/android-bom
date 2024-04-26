@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("maven-publish")
-    id("kotlin-kapt")
 }
 
 android {
@@ -75,9 +74,9 @@ val depList = mutableListOf<MavenDep>().apply {
 }
 
 dependencies {
-    depList.forEach {
-        api("${it.group}:${it.name}:${it.version}")
-    }
+//    depList.forEach {
+//        api("${it.group}:${it.name}:${it.version}")
+//    }
 }
 
 publishing {

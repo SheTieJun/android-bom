@@ -1,5 +1,7 @@
-# Android Jetpack Bom 30
+# Android Jetpack Bom 34
+compileSdk = 34
 
+```toml
 kotlin = "1.9.20"
 androidx-activity = "1.9.0"
 androidx-core= "1.13.0"
@@ -32,6 +34,7 @@ metricsPerformance = "1.0.0-alpha04"
 runner = "1.5.2"
 tracingKtx = "1.1.0"
 androidx-paging="3.2.1"
+```
 
 ```kotlin
 
