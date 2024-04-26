@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.androidx.bom"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 21
@@ -32,46 +32,47 @@ android {
     }
 }
 class MavenDep(val group: String, val name: String, val version: String)
+
 val depList = mutableListOf<MavenDep>().apply {
-    add(MavenDep("androidx.core", "core-ktx", "1.6.0"))
-    add(MavenDep("androidx.appcompat", "appcompat", "1.3.1"))
-    add(MavenDep("androidx.constraintlayout", "constraintlayout", "2.1.0"))
-    add(MavenDep("androidx.recyclerview", "recyclerview", "1.2.1"))
-    add(MavenDep("androidx.work", "work-runtime-ktx", "2.7.0"))
-    add(MavenDep("androidx.core", "core-splashscreen", "1.0.1"))
-    add(MavenDep("androidx.activity", "activity-ktx", "1.3.1"))
-    add(MavenDep("androidx.palette", "palette", "1.0.0"))
-    add(MavenDep("androidx.cardview", "cardview", "1.0.0"))
-    add(MavenDep("com.google.android.material", "material", "1.4.0"))
-    add(MavenDep("androidx.startup", "startup-runtime", "1.1.0"))
-    add(MavenDep("androidx.swiperefreshlayout", "swiperefreshlayout", "1.1.0"))
-    add(MavenDep("androidx.webkit", "webkit", "1.4.0"))
-    add(MavenDep("androidx.window", "window", "1.0.0-alpha06"))
-    add(MavenDep("androidx.browser", "browser", "1.3.0"))
-    add(MavenDep("androidx.core", "core-animation", "1.0.0-rc01"))
-    add(MavenDep("androidx.concurrent", "concurrent-futures-ktx", "1.1.0"))
-    add(MavenDep("androidx.test.espresso", "espresso-core", "3.4.0"))
-    add(MavenDep("androidx.preference", "preference-ktx", "1.1.1"))
-    add(MavenDep("androidx.test", "runner", "1.4.0"))
-    add(MavenDep("androidx.fragment", "fragment-ktx", "1.4.1"))
-    add(MavenDep("androidx.lifecycle", "lifecycle-runtime-ktx", "2.7.0"))
-    add(MavenDep("androidx.lifecycle", "lifecycle-viewmodel-ktx", "2.7.0"))
-    add(MavenDep("androidx.lifecycle", "lifecycle-livedata-ktx", "2.7.0"))
-    val roomVersion = "2.4.0"
+    add(MavenDep("androidx.core", "core-ktx", libs.versions.androidx.core.get()))
+    add(MavenDep("androidx.appcompat", "appcompat", libs.versions.androidx.appcompat.get()))
+    add(MavenDep("androidx.constraintlayout", "constraintlayout", libs.versions.androidx.constraintlayout.get()))
+    add(MavenDep("androidx.recyclerview", "recyclerview", libs.versions.recyclerview.get()))
+    add(MavenDep("androidx.core", "core-splashscreen", libs.versions.androidx.splashscreen.get()))
+    add(MavenDep("androidx.activity", "activity-ktx", libs.versions.androidx.activity.get()))
+    add(MavenDep("androidx.palette", "palette", libs.versions.androidx.palette.get()))
+    add(MavenDep("androidx.cardview", "cardview", libs.versions.androidx.cardview.get()))
+    add(MavenDep("com.google.android.material", "material", libs.versions.material.get()))
+    add(MavenDep("androidx.startup", "startup-runtime", libs.versions.androidx.startup.get()))
+    add(MavenDep("androidx.swiperefreshlayout", "swiperefreshlayout", libs.versions.androidx.swiperefreshlayout.get()))
+    add(MavenDep("androidx.webkit", "webkit", libs.versions.androidx.webKit.get()))
+    add(MavenDep("androidx.window", "window", libs.versions.androidx.window.get()))
+    add(MavenDep("androidx.browser", "browser", libs.versions.androidx.browser.get()))
+    add(MavenDep("androidx.core", "core-animation", libs.versions.androidx.animationCore.get()))
+    add(MavenDep("androidx.concurrent", "concurrent-futures-ktx", libs.versions.androidx.concurrent.get()))
+    add(MavenDep("androidx.test.espresso", "espresso-core",libs.versions.espressoCore.get()))
+    add(MavenDep("androidx.preference", "preference-ktx", libs.versions.preferenceVersion.get()))
+    add(MavenDep("androidx.test", "runner", libs.versions.runner.get()))
+    add(MavenDep("androidx.fragment", "fragment-ktx", libs.versions.androidx.fragment.get()))
+    val lifecycleVersion  =libs.versions.androidx.lifecycle.get()
+    add(MavenDep("androidx.lifecycle", "lifecycle-runtime-ktx", lifecycleVersion))
+    add(MavenDep("androidx.lifecycle", "lifecycle-viewmodel-ktx", lifecycleVersion))
+    add(MavenDep("androidx.lifecycle", "lifecycle-livedata-ktx", lifecycleVersion))
+    val roomVersion = libs.versions.androidx.room.get()
     add(MavenDep("androidx.room", "room-runtime", roomVersion))
     add(MavenDep("androidx.room", "room-ktx", roomVersion))
     add(MavenDep("androidx.room", "room-compiler", roomVersion))
     add(MavenDep("androidx.room", "room-paging", roomVersion))
-    val workVersion = "2.5.0"
+    val workVersion = libs.versions.androidx.work.get()
     add(MavenDep("androidx.work", "work-runtime-ktx", workVersion))
     add(MavenDep("androidx.work", "work-multiprocess", workVersion))
-    val navigationVersion = "2.4.0"
+    val navigationVersion = libs.versions.androidx.navigation.get()
     add(MavenDep("androidx.navigation", "navigation-fragment-ktx", navigationVersion))
     add(MavenDep("androidx.navigation", "navigation-ui-ktx", navigationVersion))
-    add(MavenDep("androidx.paging", "paging-runtime-ktx", "3.0.1"))
-    add(MavenDep("androidx.tracing", "tracing-ktx", "1.2.0"))
-    add(MavenDep("androidx.datastore", "datastore-preferences", "1.0.0"))
-    add(MavenDep("androidx.metrics", "metrics-performance", "1.0.0-beta01"))
+    add(MavenDep("androidx.paging", "paging-runtime-ktx", "3.2.1"))
+    add(MavenDep("androidx.tracing", "tracing-ktx", libs.versions.tracingKtx.get()))
+    add(MavenDep("androidx.datastore", "datastore-preferences", libs.versions.androidx.datastore.get()))
+    add(MavenDep("androidx.metrics", "metrics-performance", libs.versions.metricsPerformance.get()))
 }
 
 dependencies {
@@ -91,7 +92,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.SheTieJun"
             artifactId = "androidx-bom"
-            version = "30.1.0.0"
+            version = "34.1.0.0"
             pom.withXml {
 
                 asNode().appendNode("dependencyManagement")
@@ -103,7 +104,6 @@ publishing {
                             depNode.appendNode("artifactId", mavenDep.name)
                             depNode.appendNode("version", mavenDep.version)
                         }
-
                     }
             }
         }
