@@ -1,4 +1,6 @@
-# Android Jetpack Bom 30
+# Android Jetpack Bom 34
+compileSdk = 34
+
 ```toml
 kotlin = "1.9.20"
 androidx-activity = "1.9.0"
