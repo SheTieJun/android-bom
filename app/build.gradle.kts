@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.shetj.android.bom"
-    compileSdk = 31
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.shetj.android.bom"
