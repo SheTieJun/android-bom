@@ -23,5 +23,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "android-bom"
-include(":app")
 include(":bom")
