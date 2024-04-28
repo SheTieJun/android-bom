@@ -8,31 +8,49 @@ Dependency 'androidx.xxxxx' requires libraries and applications that
         depend on it to compile against version 34 or later of the Android APIs.
 ```
 
-# 测试中
-## [Android Jetpack Bom 31](doc/Android-Jetpack-Bom-31.MD)
-```kotlin
-dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:31.1.0.0"))
-}
-```
-## [Android Jetpack Bom 32](doc/Android-Jetpack-Bom-32.MD)
-```kotlin
-dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:32.1.0.0"))
-}
-```
-## [Android Jetpack Bom 33](doc/Android-Jetpack-Bom-33.MD)
-```kotlin
-dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:33.1.0.0"))
-}
-```
-## [Android Jetpack Bom 34](doc/Android-Jetpack-Bom-34.MD)
+> 本项目是基于Androidx Jetpack 进行的封装，方便自己的项目进行升级,不用每次都去查找对应的版本
+> 但是不是含有所有的Jetpack项目，只是一些常用的项目，如果有需要其他还是需要你自己去查找对应的版本，也可以对当前项目进行升级
+
+#  相关文档
+## :white_check_mark: [Android Jetpack Bom 34](doc/Android-Jetpack-Bom-34.MD)
+
+- 分支：[Bom-34](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-34)
+
 ```kotlin
 dependencies {
     implementation(platform("com.github.SheTieJun:androidx-bom:34.1.0.0"))
 }
 ```
+## :white_check_mark: [Android Jetpack Bom 33](doc/Android-Jetpack-Bom-33.MD)
+
+- 分支：[Bom-33](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-33)
+
+```kotlin
+dependencies {
+    implementation(platform("com.github.SheTieJun:androidx-bom:33.1.0.0"))
+}
+```
+## :white_check_mark: [Android Jetpack Bom 32](doc/Android-Jetpack-Bom-32.MD
+
+- 分支：[Bom-32](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-32)
+- 
+```kotlin
+dependencies {
+    implementation(platform("com.github.SheTieJun:androidx-bom:32.1.0.0"))
+}
+```
+
+## :white_check_mark: [Android Jetpack Bom 31](doc/Android-Jetpack-Bom-31.MD) 
+
+- 分支：[Bom-31](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-31)
+
+```kotlin
+dependencies {
+    implementation(platform("com.github.SheTieJun:androidx-bom:31.1.0.0"))
+}
+```
+
+> 都已测试通过,对应的minCompileSdk >= 对应的BOM版本,更低的我好像用不到了
 
 ## 使用案例
 ```kotlin
