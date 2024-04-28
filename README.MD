@@ -2,7 +2,7 @@
 
 ## 说明
 
-因为总是出现最新版本编译错误，所以决定创建相关bom帮助自己的一些项目进行升级
+因为在公司维护比较多的项目，最近总是出现最低版本编译（`minCompileSdk`）错误，所以决定创建相关`BOM`帮助自己的对一些**老项目进行升级**
 ```kotlin
 Dependency 'androidx.xxxxx' requires libraries and applications that
         depend on it to compile against version 34 or later of the Android APIs.
@@ -53,6 +53,19 @@ dependencies {
 > 都已测试通过,对应的minCompileSdk >= 对应的BOM版本,更低的我好像用不到了
 
 ## 使用案例
+- **Step 1. Add the JitPack repository to your build file**
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenLocal()
+        mavenCentral()
+        maven("https://jitpack.io") 
+    }
+}
+```
+- **Step 2. Add the dependency**
 ```kotlin
 dependencies {
     implementation(platform("com.github.SheTieJun:androidx-bom:33.1.0.0"))
@@ -61,7 +74,6 @@ dependencies {
     implementation("com.google.android.material:material")
     implementation("androidx.constraintlayout:constraintlayout")
     implementation("androidx.recyclerview:recyclerview")
-    implementation("androidx.work:work-runtime-ktx")
     implementation("androidx.metrics:metrics-performance")
     implementation("androidx.core:core-splashscreen")
     implementation("androidx.activity:activity:1.6.2")
