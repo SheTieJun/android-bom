@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("maven-publish")
+    id("maven-publish")//1. 发布插件
 }
 
 android {
@@ -31,7 +31,7 @@ android {
     }
 }
 class MavenDep(val group: String, val name: String, val version: String)
-
+// 这里是管理相关依赖版本
 val depList = mutableListOf<MavenDep>().apply {
     add(MavenDep("androidx.core", "core-ktx", libs.versions.androidx.core.get()))
     add(MavenDep("androidx.appcompat", "appcompat", libs.versions.androidx.appcompat.get()))
@@ -80,13 +80,14 @@ dependencies {
 }
 
 publishing {
-    // Define your local maven path
+    //2. 创建发布的内容
     publications {
         create<MavenPublication>("release") {
             groupId = "com.github.SheTieJun"
             artifactId = "androidx-bom"
             version = "34.1.0.0"
             pom.withXml {
+                //3.修改pom,将相关依赖添加dependencyManagement中
                 asNode().appendNode("dependencyManagement")
                     .appendNode("dependencies")
                     .also { dependencies ->
