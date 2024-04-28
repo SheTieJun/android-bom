@@ -1,5 +1,5 @@
 # Android Jetpack Bom 34
-compileSdk = 34
+minCompileSdk >= 34
 
 ```toml
 kotlin = "1.9.20"

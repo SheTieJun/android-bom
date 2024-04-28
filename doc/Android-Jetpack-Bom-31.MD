@@ -1,6 +1,6 @@
 # Android Jetpack Bom 31
 
-compileSdk = 31
+minCompileSdk >= 31
 
 
 ```toml

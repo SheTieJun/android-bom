@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("maven-publish")
+    id("maven-publish")//1. 发布插件
 }
 
 android {
@@ -31,7 +31,7 @@ android {
     }
 }
 class MavenDep(val group: String, val name: String, val version: String)
-
+// 这里是管理相关依赖版本
 val depList = mutableListOf<MavenDep>().apply {
     add(MavenDep("androidx.core", "core-ktx", libs.versions.androidx.core.get()))
     add(MavenDep("androidx.appcompat", "appcompat", libs.versions.androidx.appcompat.get()))
@@ -71,6 +71,15 @@ val depList = mutableListOf<MavenDep>().apply {
     add(MavenDep("androidx.paging", "paging-runtime-ktx", libs.versions.androidx.paging.get()))
     add(MavenDep("androidx.tracing", "tracing-ktx", libs.versions.tracingKtx.get()))
     add(MavenDep("androidx.datastore", "datastore-preferences", libs.versions.androidx.datastore.get()))
+    add(MavenDep("androidx.media3", "media3-exoplayer", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-exoplayer-dash", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-exoplayer-hls", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-exoplayer-rtsp", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-datasource-okhttp", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-datasource-cronet", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-datasource-rtmp", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-session", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-ui", libs.versions.androidx.media3.get()))
 }
 
 dependencies {
@@ -80,13 +89,14 @@ dependencies {
 }
 
 publishing {
-    // Define your local maven path
+    //2. 创建发布的内容
     publications {
         create<MavenPublication>("release") {
             groupId = "com.github.SheTieJun"
             artifactId = "androidx-bom"
-            version = "32.1.0.0"
+            version = "32.1.0.2"
             pom.withXml {
+                //3.修改pom,将相关依赖添加dependencyManagement中
                 asNode().appendNode("dependencyManagement")
                     .appendNode("dependencies")
                     .also { dependencies ->

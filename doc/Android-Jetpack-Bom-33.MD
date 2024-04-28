@@ -1,6 +1,6 @@
 # Android Jetpack Bom 33
 
-compileSdk = 33
+minCompileSdk >= 33
 
 ```toml
 kotlin = "1.8.22"
