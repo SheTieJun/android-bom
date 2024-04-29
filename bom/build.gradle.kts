@@ -71,6 +71,15 @@ val depList = mutableListOf<MavenDep>().apply {
     add(MavenDep("androidx.paging", "paging-runtime-ktx", libs.versions.androidx.paging.get()))
     add(MavenDep("androidx.tracing", "tracing-ktx", libs.versions.tracingKtx.get()))
     add(MavenDep("androidx.datastore", "datastore-preferences", libs.versions.androidx.datastore.get()))
+    add(MavenDep("androidx.media3", "media3-exoplayer", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-exoplayer-dash", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-exoplayer-hls", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-exoplayer-rtsp", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-datasource-okhttp", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-datasource-cronet", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-datasource-rtmp", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-session", libs.versions.androidx.media3.get()))
+    add(MavenDep("androidx.media3", "media3-ui", libs.versions.androidx.media3.get()))
 }
 
 dependencies {
@@ -85,7 +94,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.SheTieJun"
             artifactId = "androidx-bom"
-            version = "34.1.0.0"
+            version = "34.1.0.1"
             pom.withXml {
                 //3.修改pom,将相关依赖添加dependencyManagement中
                 asNode().appendNode("dependencyManagement")

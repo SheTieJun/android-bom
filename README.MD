@@ -13,45 +13,43 @@ Dependency 'androidx.xxxxx' requires libraries and applications that
 
 项目也是一个创建BOM的示例，如果这个技术或者项目对你们也有用的话，可以star项目一下。
 
+- [利用Gradle创建BOM,解决minCompileSdk 的编译问题](https://github.com/SheTieJun/androidx-bom/wiki/%E5%88%A9%E7%94%A8Gradle%E5%88%9B%E5%BB%BABOM,%E8%A7%A3%E5%86%B3minCompileSdk-%E7%9A%84%E7%BC%96%E8%AF%91%E9%97%AE%E9%A2%98)
+
 #  相关文档
 ## :white_check_mark: [Android Jetpack Bom 34](doc/Android-Jetpack-Bom-34.MD)
 
 - **分支：[Bom-34](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-34)**
-- **[Releases 34.1.0.0](https://github.com/SheTieJun/androidx-bom/releases/tag/34.1.0.0)**
 
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:34.1.0.0"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:34.x.x.x"))
 }
 ```
 ## :white_check_mark: [Android Jetpack Bom 33](doc/Android-Jetpack-Bom-33.MD)
 
 - **分支：[Bom-33](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-33)**
-- **[Releases 33.1.0.0](https://github.com/SheTieJun/androidx-bom/releases/tag/33.1.0.0)**
 
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:33.1.0.0"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:33.x.x.x"))
 }
 ```
 ## :white_check_mark: [Android Jetpack Bom 32](doc/Android-Jetpack-Bom-32.MD)
 
 - **分支：[Bom-32](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-32)**
-- **[Releases 32.1.0.0](https://github.com/SheTieJun/androidx-bom/releases/tag/32.1.0.0)**
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:32.1.0.0"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:32.x.x.x"))
 }
 ```
 
 ## :white_check_mark: [Android Jetpack Bom 31](doc/Android-Jetpack-Bom-31.MD) 
 
 - **分支：[Bom-31](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-31)**
-- **[Releases 31.1.0.0](https://github.com/SheTieJun/androidx-bom/releases/tag/31.1.0.0)**
 
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:31.1.0.0"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:31.x.x.x"))
 }
 ```
 
@@ -72,7 +70,7 @@ dependencyResolutionManagement {
 - **Step 2. Add the dependency**
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:33.1.0.0"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:34.1.0.0"))
     implementation("androidx.core:core-ktx")
     implementation("androidx.appcompat:appcompat")
     implementation("com.google.android.material:material")
@@ -108,5 +106,15 @@ dependencies {
     implementation("androidx.tracing:tracing-ktx")
     implementation("androidx.datastore:datastore-preferences")
     implementation("androidx.metrics:metrics-performance")
+    implementation("androidx.media3:media3-session")
+    implementation("androidx.media3:media3-ui")
+    implementation("androidx.media3:media3-exoplayer")
+    implementation("androidx.media3:media3-exoplayer-dash")
+    implementation("androidx.media3:media3-exoplayer-hls")
+    implementation("androidx.media3:media3-exoplayer-rtsp")
+    implementation("androidx.media3:media3-datasource-rtmp")
+    implementation("androidx.media3:media3-datasource-cronet")
+    implementation("androidx.media3:media3-datasource-okhttp")
+    kapt("androidx.room:room-compiler")
 }
 ```
