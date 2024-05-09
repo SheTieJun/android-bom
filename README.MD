@@ -22,7 +22,7 @@ Dependency 'androidx.xxxxx' requires libraries and applications that
 
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:34.x.x.x"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:34.1.0.1"))
 }
 ```
 ## :white_check_mark: [Android Jetpack Bom 33](doc/Android-Jetpack-Bom-33.MD)
@@ -31,7 +31,7 @@ dependencies {
 
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:33.x.x.x"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:33.1.0.0"))
 }
 ```
 ## :white_check_mark: [Android Jetpack Bom 32](doc/Android-Jetpack-Bom-32.MD)
@@ -39,7 +39,7 @@ dependencies {
 - **分支：[Bom-32](https://github.com/SheTieJun/androidx-bom/tree/feature/bom-32)**
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:32.x.x.x"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:32.1.0.0"))
 }
 ```
 
@@ -49,7 +49,7 @@ dependencies {
 
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:31.x.x.x"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:31.1.0.0"))
 }
 ```
 
@@ -62,15 +62,15 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
-        mavenCentral()
-        maven("https://jitpack.io") 
+        mavenCentral() //如果发布在本地
+        maven("https://jitpack.io") //如果发布jitpack
     }
 }
 ```
 - **Step 2. Add the dependency**
 ```kotlin
 dependencies {
-    implementation(platform("com.github.SheTieJun:androidx-bom:34.1.0.0"))
+    implementation(platform("com.github.SheTieJun:androidx-bom:${compileSdkVersion}.1.0.0"))
     implementation("androidx.core:core-ktx")
     implementation("androidx.appcompat:appcompat")
     implementation("com.google.android.material:material")
